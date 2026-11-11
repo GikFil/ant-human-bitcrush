@@ -1,16 +1,17 @@
+
 cmake_minimum_required(VERSION 3.22)
 
 project(antihuman_bitcrush VERSION 1.0.0 LANGUAGES C CXX)
 
 include(FetchContent)
 
-# JUCE is fetched automatically during the first CMake configure.
 FetchContent_Declare(
     JUCE
     GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
     GIT_TAG 9.0.5
     GIT_SHALLOW TRUE
 )
+
 FetchContent_MakeAvailable(JUCE)
 
 juce_add_plugin(AntihumanBitcrush
@@ -28,6 +29,8 @@ juce_add_plugin(AntihumanBitcrush
     COPY_PLUGIN_AFTER_BUILD FALSE
     FORMATS VST3 Standalone
 )
+
+juce_generate_juce_header(AntihumanBitcrush)
 
 target_sources(AntihumanBitcrush PRIVATE
     PluginProcessor.cpp
