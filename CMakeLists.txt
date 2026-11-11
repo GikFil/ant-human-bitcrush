@@ -30,10 +30,10 @@ juce_add_plugin(AntihumanBitcrush
 )
 
 target_sources(AntihumanBitcrush PRIVATE
-    Source/PluginProcessor.cpp
-    Source/PluginProcessor.h
-    Source/PluginEditor.cpp
-    Source/PluginEditor.h
+    PluginProcessor.cpp
+    PluginProcessor.h
+    PluginEditor.cpp
+    PluginEditor.h
 )
 
 target_compile_features(AntihumanBitcrush PRIVATE cxx_std_17)
