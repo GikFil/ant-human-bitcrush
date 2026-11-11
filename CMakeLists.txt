@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
 
-project(AntihumanBitcrush VERSION 1.0.0 LANGUAGES CXX)
+project(antihuman_bitcrush VERSION 1.0.0 LANGUAGES C CXX)
 
 include(FetchContent)
 
